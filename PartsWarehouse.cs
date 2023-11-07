@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Runtime.Serialization;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿
 
 namespace Lab8
 {
     /// <summary>
     /// Класс описывающий свойства запчасти.
     /// </summary>
-
-
+    [Serializable]
     public class PartsWarehouse 
     {
         
@@ -35,6 +28,11 @@ namespace Lab8
             Id = id;
             Price = price;
             Quantity = quantity;
+        }
+
+        public PartsWarehouse()
+        {
+
         }
 
         /// <summary>

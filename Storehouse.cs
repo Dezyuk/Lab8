@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Runtime.Serialization;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Lab8
 {
@@ -13,23 +7,16 @@ namespace Lab8
     /// </summary>
     public class Storehouse
     {
-        private List<PartsWarehouse> _warehouseList;
-        //List<PartsWarehouse> warehouseList = new List<PartsWarehouse>();
+        List<PartsWarehouse> warehouseList = new List<PartsWarehouse>();
 
-        public Storehouse(List<PartsWarehouse> list) 
-        {
-            WarehouseList = list;
-        }
-        public Storehouse()
-        {
-            WarehouseList = new List<PartsWarehouse>();
-        }
+        
+       
         public List<PartsWarehouse> WarehouseList 
         {
-            get => _warehouseList; 
-            set => _warehouseList = (value is null ? new List<PartsWarehouse>() : value); 
+            get => warehouseList; 
+            set => warehouseList = value; 
         }
-
+       
 
 
 
